@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="voter-login-container">
+        <!-- Header -->
+        <header class="login-header">
+            <h1 class="login-title">Voter Login</h1>
+            <p class="login-subtitle">Secure your vote and make it count!</p>
+        </header>
+        
+        <!-- Voter ID Input Section -->
+        <section class="login-section">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="voterIdInput" 
+                    class="input-field" 
+                    placeholder="Enter Your Voter ID" 
+                />
+                <button onclick="verifyVoter()" class="btn verify-btn">Verify</button>
+            </div>
+        </section>
+
+        <!-- Voting Section -->
+        <section id="votingSection" class="voting-section hidden">
+            <h2 class="voting-title">Select Your Candidate</h2>
+            <div class="candidate-buttons">
+                <button class="candidate-btn" onclick="submitVote('12345', 'Candidate A')">Candidate A</button>
+                <button class="candidate-btn" onclick="submitVote('12345', 'Candidate B')">Candidate B</button>
+            </div>
+        </section>
+
+        <!-- Thank You Section -->
+        <section id="thankYouScreen" class="thank-you-section hidden">
+            <h2 class="thank-you-message">Thank You for Voting!</h2>
+            <p class="thank-you-note">Your voice makes a difference!</p>
+        </section>
+    </div>
+    <script src="voter.js"></script>
+</body>
+</html>
