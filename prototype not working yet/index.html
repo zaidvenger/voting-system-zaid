@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="hi">हिंदी</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+        </select>
+    </div>
+
+    <div class="landing-page">
+        <!-- Content Section -->
+        <div class="content">
+            <h1 id="mainTitle" class="animated-title">Welcome to the Online Voting System</h1>
+            <p class="tagline animated-quote" id="tagline">Your Vote Matters!</p>
+            <div class="buttons">
+                <a href="voters.html" class="button" id="voterButton">Voter Login</a>
+            </div>
+        </div>
+
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <img src="team_amara.png" alt="Team Amara Logo">
+        </div>
+    </div>
+
+    <script>
+        // Function to Change Language
+        function changeLanguage() {
+            const selectedLanguage = document.getElementById("languageSelect").value;
+
+            // Language translations
+            const translations = {
+                en: {
+                    title: "Welcome to the Online Voting System",
+                    tagline: "Your Vote Matters!",
+                    voterLogin: "Voter Login"
+                },
+                hi: {
+                    title: "ऑनलाइन मतदान प्रणाली में आपका स्वागत है",
+                    tagline: "आपका वोट महत्वपूर्ण है!",
+                    voterLogin: "मतदाता लॉगिन"
+                },
+                es: {
+                    title: "Bienvenido al Sistema de Votación en Línea",
+                    tagline: "¡Tu voto importa!",
+                    voterLogin: "Inicio de Sesión para Votantes"
+                },
+                fr: {
+                    title: "Bienvenue dans le Système de Vote en Ligne",
+                    tagline: "Votre vote compte !",
+                    voterLogin: "Connexion des électeurs"
+                }
+            };
+
+            // Update text content based on language
+            document.getElementById("mainTitle").innerText = translations[selectedLanguage].title;
+            document.getElementById("tagline").innerText = translations[selectedLanguage].tagline;
+            document.getElementById("voterButton").innerText = translations[selectedLanguage].voterLogin;
+        }
+    </script>
+</body>
+</html>

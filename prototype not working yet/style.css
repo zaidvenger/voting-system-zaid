@@ -1,0 +1,370 @@
+/* General Body */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #dceefd, #e8f4ff);
+    color: #333;
+}
+
+/* Language Selector */
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-selector select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #0056b3;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #0056b3;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.language-selector select:hover {
+    background-color: #e8f4ff;
+    color: #003d80;
+}
+
+/* Landing Page */
+.landing-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 50px;
+}
+
+/* Content Section */
+.content {
+    max-width: 60%;
+    text-align: left;
+}
+
+.content h1 {
+    font-size: 3rem;
+    color: #0056b3;
+    animation: dropIn 1s ease-in-out;
+}
+
+.content .tagline {
+    font-size: 1.5rem;
+    color: #444;
+    margin: 20px 0 40px;
+    animation: dropIn 1.5s ease-in-out;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Remove underline from Voter Login button */
+.button {
+    text-decoration: none;
+}
+.button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #003d80;
+    transform: scale(1.05);
+}
+
+/* Logo Section */
+.logo-section {
+    max-width: 35%;
+    text-align: right;
+}
+
+.logo-section img {
+    width: 100%;
+    max-height: 80vh;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animations */
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* General Body */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #dceefd, #e8f4ff);
+    color: #333;
+}
+
+/* Language Selector */
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-selector select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #0056b3;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #0056b3;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.language-selector select:hover {
+    background-color: #e8f4ff;
+    color: #003d80;
+}
+
+/* Landing Page */
+.landing-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 50px;
+}
+
+/* Content Section */
+.content {
+    max-width: 60%;
+    text-align: left;
+}
+
+.content h1 {
+    font-size: 3rem;
+    color: #0056b3;
+    animation: dropIn 1s ease-in-out;
+}
+
+.content .tagline {
+    font-size: 1.5rem;
+    color: #444;
+    margin: 20px 0 40px;
+    animation: dropIn 1.5s ease-in-out;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Remove underline from Voter Login button */
+.button {
+    text-decoration: none;
+}
+.button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #003d80;
+    transform: scale(1.05);
+}
+
+/* Logo Section */
+.logo-section {
+    max-width: 35%;
+    text-align: right;
+}
+
+.logo-section img {
+    width: 100%;
+    max-height: 80vh;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animations */
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* General Body */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #dceefd, #e8f4ff);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Common Container */
+.voter-login-container,
+.voting-container,
+.thank-you-container {
+    max-width: 600px;
+    width: 90%;
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header */
+.login-title, .voting-title, .thank-you-title {
+    font-size: 2.5rem;
+    color: #0056b3;
+}
+
+.login-subtitle, .voting-subtitle, .thank-you-message {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Input Group */
+.input-field {
+    width: 80%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #cfdff2;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.verify-btn, .candidate-btn, .button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.verify-btn:hover, .candidate-btn:hover, .button:hover {
+    background-color: #003d80;
+    transform: scale(1.05);
+}
+
+/* Candidate Buttons */
+.candidate-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Title */
+.title {
+    font-size: 2rem;
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Info */
+.info {
+    text-align: center;
+    color: #666;
+}
+
+/* Candidate Vote Counts */
+#candidateVoteCounts p {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 5px 0;
+}

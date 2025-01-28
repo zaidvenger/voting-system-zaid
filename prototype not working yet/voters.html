@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="voter-login-container">
+        <!-- Header -->
+        <header class="login-header">
+            <h1 class="login-title">Voter Login</h1>
+            <p class="login-subtitle">Enter your Voter ID to proceed to voting.</p>
+        </header>
+        
+        <!-- Voter ID Input Section -->
+        <section class="login-section">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="voterIdInput" 
+                    class="input-field" 
+                    placeholder="Enter Your Voter ID" 
+                />
+                <button onclick="verifyVoter()" class="verify-btn">Verify</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Valid voter IDs
+        const validVoterIds = ["12345", "67890", "11111", "22222", "33333"];
+
+        // Verify voter function
+        function verifyVoter() {
+            const voterId = document.getElementById("voterIdInput").value.trim();
+            const alreadyVoted = JSON.parse(sessionStorage.getItem("votedVoters")) || [];
+
+            if (validVoterIds.includes(voterId)) {
+                if (alreadyVoted.includes(voterId)) {
+                    alert("You have already voted. You cannot vote again.");
+                } else {
+                    // Store verified voter ID in session storage
+                    sessionStorage.setItem("verifiedVoter", voterId);
+                    alert("Voter ID verified! Redirecting to the voting page.");
+                    // Redirect to candidate selection page
+                    window.location.href = "select_candidate.html";
+                }
+            } else {
+                alert("Invalid Voter ID! Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>

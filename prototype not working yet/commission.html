@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Commission</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Election Commission Dashboard</h1>
+        <h3>Live Voting Statistics</h3>
+        <table id="voterLogTable" border="1" cellspacing="0" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>Serial No.</th>
+                    <th>Voter ID</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="voterLogTableBody">
+                <!-- Dynamically updated rows -->
+            </tbody>
+        </table>
+        <h3>Candidate Vote Counts</h3>
+        <div id="candidateVoteCounts">
+            <!-- Dynamically updated vote counts -->
+        </div>
+        <p class="info">The table updates every 2 seconds to show live voting statistics.</p>
+    </div>
+    <script src="commission.js"></script>
+</body>
+</html>

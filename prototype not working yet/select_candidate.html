@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Candidate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="voting-container">
+        <!-- Header -->
+        <header class="voting-header">
+            <h1 class="voting-title">Select Your Candidate</h1>
+            <p class="voting-subtitle">Click on your preferred candidate to cast your vote!</p>
+        </header>
+
+        <!-- Candidates Section -->
+        <section class="candidates-section">
+            <div class="candidate-buttons">
+                <button class="candidate-btn" onclick="submitVote('Candidate A')">Candidate A</button>
+                <button class="candidate-btn" onclick="submitVote('Candidate B')">Candidate B</button>
+                <button class="candidate-btn" onclick="submitVote('Candidate C')">Candidate C</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Check if voter is verified
+        const verifiedVoter = sessionStorage.getItem("verifiedVoter");
+        const alreadyVoted = JSON.parse(sessionStorage.getItem("votedVoters")) || [];
+
+        if (!verifiedVoter || alreadyVoted.includes(verifiedVoter)) {
+            alert("You are not authorized to vote or have already voted.");
+            window.location.href = "voters.html"; // Redirect back to login page
+        }
+
+        // Submit vote function
+        function submitVote(candidate) {
+            // Retrieve stored votes from sessionStorage or initialize
+            const votes = JSON.parse(sessionStorage.getItem("votes")) || [];
+            const candidateIndex = votes.findIndex(c => c.name === candidate);
+
+            if (candidateIndex !== -1) {
+                votes[candidateIndex].votes += 1;
+            } else {
+                votes.push({ name: candidate, votes: 1 });
+            }
+
+            // Save updated votes to sessionStorage
+            sessionStorage.setItem("votes", JSON.stringify(votes));
+
+            // Mark voter as having voted
+            alreadyVoted.push(verifiedVoter);
+            sessionStorage.setItem("votedVoters", JSON.stringify(alreadyVoted));
+
+            // Thank the voter and redirect to thank you page
+            alert(`Thank you for voting for ${candidate}!`);
+            window.location.href = "thank_you.html";
+        }
+    </script>
+</body>
+</html>
